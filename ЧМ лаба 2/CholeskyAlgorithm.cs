@@ -81,6 +81,7 @@ namespace Task2_NM
 			x = new double[N];
 			x_rand = new double[N];
 			CalculateRandomA(minValue, maxValue);
+			//Print();
 			multipleAonK(k);
 			CalculateRandomX(minValue, maxValue);
 			Calculate_f();
@@ -345,10 +346,7 @@ namespace Task2_NM
 		{
 			for(int rowInd = 0; rowInd < N; ++rowInd)
 			{
-				for(int columnInd =0; columnInd<L; ++columnInd)
-				{
-					A[rowInd, columnInd] *= Math.Pow(10, -k);
-				}
+				A[rowInd, L-1] *= Math.Pow(10, -k);
 			}
 		}
 	}

@@ -15,10 +15,10 @@
 			};
 			var testCases2 = new (int size, int L)[]
 			{
-					(25, 25/10),
-					(50, 50/10),
-					(100, 100/10),
-					(500, 500/10)
+					(25, 25),
+					(50, 50),
+					(100, 100),
+					(500, 500)
 			};
 			var testCases3 = new (int size, int L, int k, double minValue, double maxValue)[]
 			{
@@ -68,10 +68,10 @@
 			Console.WriteLine();
 			Console.WriteLine("3.Данные о решении систем уравнений с плохо обусловленными матрицами:");
 			Console.WriteLine();
-			foreach(var (size, L, k, minValue, maxValue) in testCases3)
+			foreach (var (size, L, k, minValue, maxValue) in testCases3)
 			{
 				double unitAccuracy = 0;
-				for(int i =0; i < CountTests; ++i)
+				for (int i = 0; i < CountTests; ++i)
 				{
 					CholeskyAlgorithm matrix = new CholeskyAlgorithm(size, L, k, minValue, maxValue);
 					matrix.Solution();
@@ -83,6 +83,5 @@
 			}
 			Console.ReadLine();
 		}
-
 	}
 }
